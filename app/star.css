@@ -1,0 +1,102 @@
+/* ===== STAR BACKGROUND ===== */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+  overflow: hidden;
+}
+
+/* STAR LAYER 1 */
+#stars {
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow:
+    481px 1489px #fff, 1767px 524px #fff, 1114px 1481px #fff,
+    639px 1242px #fff, 386px 661px #fff, 1454px 1593px #fff,
+    771px 1085px #fff, 586px 1027px #fff, 982px 1891px #fff,
+    933px 481px #fff, 913px 800px #fff, 6px 784px #fff,
+    1064px 755px #fff, 366px 1561px #fff, 782px 328px #fff,
+    25px 1972px #fff, 1637px 583px #fff, 1487px 653px #fff;
+  animation: animStar 15s linear infinite;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: 2000px;
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+/* STAR LAYER 2 */
+#stars2 {
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    100px 200px #fff, 300px 400px #fff, 500px 600px #fff,
+    700px 800px #fff, 900px 1000px #fff,
+    1100px 1200px #fff, 1300px 1400px #fff,
+    1500px 1600px #fff, 1700px 1800px #fff,
+    1900px 2000px #fff;
+  animation: animStar 25s linear infinite;
+}
+
+#stars2::after {
+  content: "";
+  position: absolute;
+  top: 2000px;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+/* STAR LAYER 3 */
+#stars3 {
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow:
+    100px 200px #fff, 300px 400px #fff, 500px 600px #fff,
+    700px 800px #fff, 900px 1000px #fff,
+    1100px 1200px #fff, 1300px 1400px #fff,
+    1500px 1600px #fff, 1700px 1800px #fff,
+    1900px 2000px #fff;
+  animation: animStar 50s linear infinite;
+}
+
+#stars3::after {
+  content: "";
+  position: absolute;
+  top: 2000px;
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+#stars,
+#stars2,
+#stars3 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* ANIMATION */
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-1000px);
+  }
+}
